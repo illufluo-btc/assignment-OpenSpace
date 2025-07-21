@@ -1,0 +1,17 @@
+Ran 7 tests for test/Bank.t.sol:BankTest
+[PASS] test_DepositBalance() (gas: 110165)
+[PASS] test_OnlyAdminCanWithdraw() (gas: 125190)
+[PASS] test_TopDepositor_OneUser() (gas: 99531)
+[PASS] test_TopDepositors_FourUsers() (gas: 292923)
+[PASS] test_TopDepositors_SameUserMultipleDeposits() (gas: 108896)
+[PASS] test_TopDepositors_ThreeUsers() (gas: 259042)
+[PASS] test_TopDepositors_TwoUsers() (gas: 179485)
+Suite result: ok. 7 passed; 0 failed; 0 skipped; finished in 5.92ms (7.55ms CPU time)
+
+Ran 2 tests for test/Counter.t.sol:CounterTest
+[PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 31965, ~: 32354)
+[PASS] test_Increment() (gas: 31852)
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 9.32ms (6.56ms CPU time)
+
+Ran 2 test suites in 94.75ms (15.25ms CPU time): 9 tests passed, 0 failed, 0 skipped (9 total tests)
+
