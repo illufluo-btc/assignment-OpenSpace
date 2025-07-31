@@ -2,14 +2,14 @@
 
 本仓库包含一个基于 ERC20/ERC721 的简易 NFT 市场（NFT Marketplace），提供 **HighGas** 与 **LowGas** 两个版本，用于对比 Gas 消耗。
 
-## 文件结构 / File Structure
+## 文件结构
 
 * **BaseERC20.sol**：卖家（account0）部署，用于生成初始 ERC20 支付代币。
 * **TestNFT.sol**：卖家（account0）部署，用于铸造 NFT。
 * **NFTMarketHighGas.sol**：HighGas 版本，使用独立映射（mappings）和 `require` 验证。
 * **NFTMarketLowGas.sol**：LowGas 优化版，使用单一打包映射（packed mapping）、`immutable` 字段和授权检查。
 
-## 部署与测试 / Deployment & Testing
+## 部署与测试
 
 1. 使用 Solidity ^0.8.0 编译所有合约。
 2. **卖家（account0）**：部署 **BaseERC20.sol**，获得初始 ERC20 代币，并转给 **买家（account1）**。
@@ -28,7 +28,7 @@
 
    对比 Gas 消耗。
 
-## Gas 优化总结 / Gas Optimization Summary
+## Gas 优化总结
 
 **LowGas 版本** 通过以下方法显著降低 Gas：
 
@@ -37,11 +37,10 @@
 3. **授权检查**（Authorization Check）：在 `createListing` 中验证 ERC721 授权，避免额外的 NFT 转移操作。
 4. **代码体积精简**：使用内联 `require`，去除集中声明的自定义错误，缩减合约字节码大小。
 
-## Gas 使用对比 / Gas Report Comparison
-
+## Gas 使用对比
 | 操作 / Operation                    | HighGas (v1) | LowGas (v2) |
 | ---------------------------------- | -----------: | ----------: |
-| 部署 / Deployment                   |      932,730 |     807,633 |
+| 部署 / deploy                       |      932,730 |     807,633 |
 | 上架 / createListing(tokenId,price) |       77,034 |      52,552 |
 | 取消 / cancelListing(tokenId)       |       27,248 |      23,591 |
 | 购买 / purchase(tokenId)            |       96,559 |      91,718 |
