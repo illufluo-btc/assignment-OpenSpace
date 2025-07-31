@@ -4,10 +4,6 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
-/**
- * @title NFTMarketHighGas
- * @dev 未针对 Gas 优化，使用双映射和 require，Gas 开销较高
- */
 contract NFTMarketHighGas {
     IERC20 public token;
     IERC721 public nft;
