@@ -1,0 +1,5 @@
+deploy NFTMarketHignGas.(constructor) 932730
+NFTMarketHighGas.createListing(1,100) 77034
+NFTMarketHighGas.cancelListing(1) 27248
+NFTMarketHighGas.createListing(2,100) 77034
+NFTMarketHighGas.purchase(2) 96559

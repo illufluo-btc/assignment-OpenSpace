@@ -1,0 +1,5 @@
+deploy NFTMarketLowGas.(constructor) 807633
+NFTMarketLowGas.createListing(1,100) 52552
+NFTMarketLowGas.cancelListing(1) 23591
+NFTMarketLowGas.createListing(2,100) 52552
+NFTMarketLowGas.purchase(2) 91718
